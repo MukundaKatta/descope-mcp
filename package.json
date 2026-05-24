@@ -1,0 +1,32 @@
+{
+  "name": "@mukundakatta/descope-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Descope: verify JWTs, validate sessions, check user roles, and manage magic-link flows from any LLM agent.",
+  "mcpName": "io.github.MukundaKatta/descope-mcp",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "descope-mcp": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/index.test.js",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "mcp",
+    "descope",
+    "authentication",
+    "jwt",
+    "ai-agent",
+    "mcp-server"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^5.5.4"
+  }
+}
